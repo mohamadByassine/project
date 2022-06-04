@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --white: #FDFDFF;
+  --dgrey: #323232;
+  --g4: #1D3D4C;
+  --g3: #3A7B99;
+  --g2: #70AFCE;
+  --g1: #A5DEF1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--g3);
+}
+
+p {
+  color: var(--dgrey);
+}
+
+/* --------------------- Navigation Bar --------------------- */
+
+nav {
+  background-color: var(--white);
+  height: 8vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  color: var(--dgrey);
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.navbarlinks {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbarlinks li {
+  list-style: none;
+}
+
+.navbarlinks a {
+  text-decoration: none;
+  color: var(--dgrey);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.navbarlinks a:hover {
+  color: var(--g1);
+  transition: all 0.3s ease;
+}
+
+.navbarlinks .drivername {
+  text-decoration: none;
+  color: var(--dgrey);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.navbarlinks i {
+  font-size: 18px;
+}
+
+.navbarlinks .signout-btn {
+  border: none;
+  outline: none;
+  background-color: var(--g1);
+  border-radius: 5px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 3px 3px 0 0 rgba(50, 50, 50, 0.2);
+  padding: 5px;
+  width: 115%;
+}
+
+.navbarlinks .signout-btn:hover {
+  background-color: var(--g2);
+  color: var(--white);
+  box-shadow: none;
+}
+
+/* ------------------- Ride ----------------------- */
+
+/* Map */
+
+.ridesection, .ordersection {
+  background-color: var(--g1);
+  height: 92vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.map {
+  height: 578px;
+  width: 800px;
+}
+
+.map iframe {
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 0 rgba(50, 50, 50, 0.2);
+}
+
+.confirm {
+  background-color: var(--g2);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 0 rgba(50, 50, 50, 0.2);
+}
+
+/* Title */
+
+.confirm .title {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--white);
+  position: relative;
+}
+
+.rideconfirm {
+  width: 350px;
+}
+
+/* Informations Display */
+
+.rideconfirm .displayfield {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.displayfield p {
+  height: 50%;
+  width: 100%;
+  padding: 0 5px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: var(--white);
+  box-shadow: 5px 5px 0 0 rgba(50, 50, 50, 0.2);
+  font-size: 15px;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.destination , .currentlocation {
+  font-size: 18px;
+  color: var(--white);
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Confirm & Reject Button */
+
+.ridebuttons {
+  margin-top: 35px;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+
+.confirmridebtn, .rejectridebtn {
+  border: none;
+  outline: none;
+  background-color: var(--white);
+  border-radius: 5px;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--dgrey);
+  height: 40px;
+  width: 40%;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 5px 5px 0 0 rgba(50, 50, 50, 0.2);
+}
+
+.confirmridebtn:hover, .rejectridebtn:hover {
+  background-color: var(--g3);
+  color: var(--white);
+  box-shadow: none;
+}
+
+/* ------------------- Order ----------------------- */
+
+.ordersection {
+  background-color: var(--g2);
+}
+
+.oconfirm {
+  background-color: var(--g3);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 0 rgba(50, 50, 50, 0.2);
+}
+
+.oconfirm .title {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--white);
+  position: relative;
+}
+
+.orderconfirm {
+  width: 350px;
+}
+
+.displayfield, .descriptionfield {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.displayfield p {
+  height: 50%;
+  width: 100%;
+  padding: 0 5px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: var(--white);
+  box-shadow: 5px 5px 0 0 rgba(50, 50, 50, 0.2);
+  font-size: 15px;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.descriptionfield p {
+  height: 200%;
+  width: 100%;
+  padding: 0 5px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: var(--white);
+  box-shadow: 5px 5px 0 0 rgba(50, 50, 50, 0.2);
+  font-size: 15px;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.currentlocation {
+  font-size: 18px;
+  color: var(--white);
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.customerorder {
+  font-size: 18px;
+  color: var(--white);
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.orderbuttons {
+  margin-top: 110px;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+
+.confirmorderbtn, .rejectorderbtn {
+  border: none;
+  outline: none;
+  background-color: var(--white);
+  border-radius: 5px;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--dgrey);
+  height: 40px;
+  width: 40%;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 5px 5px 0 0 rgba(50, 50, 50, 0.2);
+}
+
+.confirmorderbtn:hover, .rejectorderbtn:hover {
+  background-color: var(--g4);
+  color: var(--white);
+  box-shadow: none;
+}
+
+/* --------------------- About Us --------------------- */
+
+.aboutsection {
+  background-color: var(--g3);
+  height: 31.5vh;
+  align-items: center;
+  padding: 10px;
+}
+
+.aboutcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+.aboutcontainer .title {
+  font-size: 40px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.aboutcontainer .para {
+  font-size: 25px;
+  color: var(--white);
+}
+
+/* --------------------- Footer --------------------- */
+
+.footer {
+  height: 8vh;
+  background-color: var(--g4);
+  align-items: center;
+  padding: 10px;
+}
+
+.footer .footercontainer {
+  padding: 8px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .footercontainer p {
+  color: var(--white);
+  font-size: 18px;
+}

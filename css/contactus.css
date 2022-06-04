@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --white: #FDFDFF;
+  --dgrey: #323232;
+  --g4: #1D3D4C;
+  --g3: #3A7B99;
+  --g2: #70AFCE;
+  --g1: #A5DEF1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--g1);
+}
+
+.container {
+  background-color: var(--g2);
+  border-radius: 7px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.contactform {
+  padding: 50px;
+}
+
+/* Title */
+
+.contactform .title {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--white);
+  position: relative;
+}
+
+.form {
+  width: 350px;
+}
+
+/* Input Fields */
+
+.form .input-field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.input-field input {
+  height: 100%;
+  width: 100%;
+  padding: 0 35px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: var(--white);
+  box-shadow: 5px 5px 0 0 rgba(50, 50, 50, 0.2);
+  font-size: 15px;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.input-field i {
+  top: 50%;
+  transform: translate(45%, -50%);
+  color: var(--dgrey);
+  font-size: 18px;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.input-field i.icon {
+  left: 0;
+}
+
+/* Text Area */
+
+.form #inputfieldd {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+#inputfieldd input {
+  height: 200%;
+  width: 100%;
+  padding: 15px 35px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: var(--white);
+  box-shadow: 5px 5px 0 0 rgba(50, 50, 50, 0.2);
+  font-size: 15px;
+  position: absolute;
+  transition: all 0.3s ease;
+  resize: none;
+}
+
+#inputfield i {
+  top: 50%;
+  transform: translate(45%, -50%);
+  color: var(--dgrey);
+  font-size: 18px;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+/* SEND */
+
+.form .sendbutton {
+  margin-top: 80px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.form .sendbutton button {
+  border: none;
+  outline: none;
+  background-color: var(--white);
+  border-radius: 5px;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--dgrey);
+  height: 40px;
+  width: 30%;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 5px 5px 0 0 rgba(50, 50, 50, 0.2);
+}
+
+.sendbutton button:hover {
+  background-color: var(--g3);
+  color: var(--white);
+  box-shadow: none;
+}

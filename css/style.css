@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --white: #FDFDFF;
+  --dgrey: #323232;
+  --g4: #1D3D4C;
+  --g3: #3A7B99;
+  --g2: #70AFCE;
+  --g1: #A5DEF1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--g1);
+}
+
+.container {
+  position: relative;
+  background: var(--white);
+  width: 100%;
+  max-width: 430px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  /* New */
+  overflow: hidden;
+  margin: 0 20px;
+}
+
+/* New */
+
+.container .forms {
+    display: flex;
+    align-items: center;
+    height: 440px; /* Log In as Customer form height = 440 */
+    width: 200%;
+    transition: height 0.2s ease;
+}
+
+/* ----- */
+
+.container .form {
+  padding: 30px;
+  background-color: var(--white);
+  border-radius: 12px;
+  /* New */
+  width: 50%;
+  transition: margin-left 0.18s ease;
+}
+
+/* New Customer */
+
+.container.active .logincustomer {
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container .signupcustomer {
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+.container.active .signupcustomer {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.container.active .forms {
+    height: 700px;
+}
+
+/* New Driver */
+
+.container.active .logindriver {
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container .signupdriver {
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+.container.active .signupdriver {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.container.active .forms {
+    height: 700px;
+}
+
+/* ----- */
+
+.container .form .title {
+  position: relative;
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--dgrey);
+}
+
+.form .input-field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.input-field input {
+  height: 100%;
+  width: 100%;
+  padding: 0 35px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--dgrey);
+  border-top: 2px solid transparent;
+  background: transparent;
+  font-size: 15px;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.input-field i {
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--dgrey);
+  font-size: 20px;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.input-field i.icon {
+  left: 0;
+}
+
+.input-field i.showHidePw {
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.input-field input:is(:focus, :valid) {
+  border-bottom-color: var(--g1);
+}
+
+.input-field input:is(:focus, :valid) ~ i {
+  color: var(--g1);
+}
+
+.form .text {
+  font-size: 17px;
+  color: var(--dgrey);
+}
+
+.form a {
+  text-decoration: none;
+  font-size: 17px;
+  color: var(--g1);
+  transition: all 0.3s ease;
+}
+
+.form a:hover {
+  color: var(--g2);
+}
+
+.form .loginbutton {
+  margin-top: 35px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.form .loginbutton button {
+  border: none;
+  outline: none;
+  background-color: var(--g1);
+  border-radius: 100px;
+  letter-spacing: 1px;
+  font-size: 19px;
+  font-weight: 500;
+  color: #FDFDFF;
+  height: 50px;
+  width: 150px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.loginbutton button:hover {
+  background-color: var(--g2);
+  color: var(--white);
+}
+
+.form .login-signup {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* ---------- Error Messages ----------- */
+
+.input-field .error {
+  font-size: 9px;
+  height: 10px;
+  color: red;
+}
+
+.input-field.error input {
+    border-bottom-color: #ff3860;
+}
+
+.input-field.error i.icon {
+    color: #ff3860;
+}
+
+.input-field.error i.showHidePw {
+    color: #ff3860;
+}
+
+.input-field.success input {
+    border-bottom-color: var(--g2);
+}
+
+.input-field.success i.icon {
+    color: var(--g2);
+}
+
+.input-field.success i.showHidePw {
+    color: var(--g2);
+}
